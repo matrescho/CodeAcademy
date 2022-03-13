@@ -34,7 +34,5 @@ public class ForLoops {
              на определен брой и тн. */
         }
 
-
-
     }
 }

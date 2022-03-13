@@ -6,17 +6,16 @@ public class Homework {
     }
 
     public static void multiply(){
-        int a = 5;
-        int b = 8;
-        int result = a + b;
-        System.out.println(result);
+        byte a = 5;
+        byte b = 8;
+        System.out.println(a+b);
     }
     public static void absValue(){
         int num1 = Math.abs(-147);
         int num2 = Math.abs(15);
         int num3 = Math.abs(0);
         int num4 = Math.abs(18);
-        System.out.println(num1 + "\t" + num2 + "\t" + num3 + "\t" + num4);
+        System.out.println(num1 + "\t" + num2 + "\t" + num3 + "\t" + num4 + "\t");
     }
 
     public static void srqRoot(){
