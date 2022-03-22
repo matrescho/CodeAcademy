@@ -20,6 +20,11 @@ public class ForLoops {
 
         String[] names ={"Bobi","Nadezhda", "Kolio"};
 
+       /* char[] reverse = "Bobi".toCharArray();
+
+        for (int i = reverse.length -1; i>= 0 ; i-- ){
+            System.out.println(reverse[i]);//принтва стринг от зад напред */
+
         for (String name :names){
             System.out.println(name);
         }
@@ -36,3 +41,4 @@ public class ForLoops {
 
     }
 }
+

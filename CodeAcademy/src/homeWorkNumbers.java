@@ -1,3 +1,5 @@
+import java.math.BigDecimal;
+
 public class homeWorkNumbers {
     public static void numbers() {
         short number = -250;
@@ -21,8 +23,8 @@ public class homeWorkNumbers {
         double number = 4.9876543;
         double number1 = 7.123456789012345678890;
         double number2 = 18_398_458_438_583_853.28;
-        double number3 = 18_398_458_438_583_853.39875937284928422;
-        System.out.println("\n" + number + "\n" + number1 + "\n" + number2 + "\n" + number3 + "\n");
+        BigDecimal bigDecimal = new BigDecimal(18_398_458_438_583_853.39875937284928422);
+        System.out.println("\n" + number + "\n" + number1 + "\n" + number2 + "\n" + bigDecimal + "\n");
 
 
     }
