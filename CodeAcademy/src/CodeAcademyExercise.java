@@ -141,12 +141,157 @@ public class CodeAcademyExercise {
 
     }
 
+    public static void golfBalls() {
+
+        //Малко по различно решение
+
+        Scanner scanner = new Scanner(System.in);
+
+        int golfBalls = 20;
+
+        do {
+
+
+            System.out.println("Enter the number of people playing");
+            int numberOfPeople = scanner.nextInt();
+            golfBalls -= numberOfPeople;
+            System.out.println("You have " + golfBalls + " remaining golfBalls");
+            System.out.println("Enter the number of people finished the game");
+            int numberOfPeopleFinishedTheGame = scanner.nextInt();
+            golfBalls += numberOfPeopleFinishedTheGame;
+            System.out.println("You have " +golfBalls + " remaining golfBalls");
+
+        }while (golfBalls >0);
+    }
+
+    public static void squareOrRectangle(){
+
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter length");
+        double length = scanner.nextDouble();
+        System.out.println("Enter wight");
+        double wight = scanner.nextDouble();
+
+
+        if (length == wight)
+        {
+            System.out.println("Square");
+        }
+        else
+        {
+            System.out.println("Rectangle");
+        }
+
+
+
+
+
+
+    }
+
+    public static void grade(){
+
+
+        Scanner scanner = new Scanner(System.in);
+
+        int grade =scanner.nextInt();
+
+
+        if (grade <=0 || grade >130){
+            System.out.println("Invalid grade");
+
+        }
+
+        if (grade < 25 && grade > 0){
+            System.out.println("F");
+        }
+        else if (grade >=25 && grade <50)
+        {
+            System.out.println("E");
+        }
+        else if (grade >= 50 && grade < 60)
+        {
+            System.out.println("D");
+        }
+        else if (grade >=60 && grade < 80)
+        {
+            System.out.println("B");
+        }
+        else if (grade >= 80 && grade < 130)
+        {
+            System.out.println("A");
+        }
+    }
+
+    public static void salaryBonus(){
+        Scanner scanner = new Scanner(System.in);
+
+        double bonus = 0;
+
+        System.out.println("Enter the number of years you have been working here");
+        int yearsOfWorking = scanner.nextInt();
+        System.out.println("Enter your Salary");
+        double salary = scanner.nextDouble();
+
+        if (yearsOfWorking > 5 && yearsOfWorking < 10){
+            bonus += salary * 0.05;
+            System.out.println("You have been working here for "+ yearsOfWorking + " years " + " Your new bonus is " + bonus);
+        }else if (yearsOfWorking > 10 && yearsOfWorking < 15){
+            bonus += salary * 0.07;
+            System.out.println("You have been working here for "+ yearsOfWorking + " years " + " Your new bonus is " + bonus);
+        }else if (yearsOfWorking > 15){
+            bonus += salary * 0.10;
+            System.out.println("You have been working here for "+ yearsOfWorking + " years " + " Your new bonus is " + bonus);
+        }else {
+            System.out.println("Either u haven't worked here long enough for a bonus or your retired ");
+        }
+
+
+
+    }
+
+    public static void discountForCloths(){
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter what u want to buy");
+        String whatAreYouBuying = scanner.nextLine();
+        System.out.println("Enter the Price ");
+        double price = scanner.nextDouble();
+
+
+        if (whatAreYouBuying.equalsIgnoreCase("cloth")){
+            System.out.println(price -= price* 0.20);
+        }else if (whatAreYouBuying.equalsIgnoreCase("shoe")){
+            System.out.println(price -= price * 0.10);
+        }else {
+            System.out.println(price -= price * 0.05);
+        }
+
+        System.out.println("You bought a " + whatAreYouBuying + " for a good price of " + price);
+
+    }
+
+
+
+
+
+
+
 
 
     public static void main(String[] args) {
-        leapYear();
-        vowels();
-        shoes();
+       // leapYear();
+       // vowels();
+       // shoes();
+      //  golfBalls();
+      //  squareOrRectangle();
+       // grade();
+       // salaryBonus();
+       // discountForCloths();
+
+
 
     }
 }
