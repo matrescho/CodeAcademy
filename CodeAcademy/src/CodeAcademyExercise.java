@@ -2,16 +2,21 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class CodeAcademyExercise {
+    static int factorial (int n){
+        if (n ==0)
+            return 1;
+        return n * factorial(n-  1);
+    }
 
     public static void vowels () {
 
 
-        /*▪ Ȁрябва да си купите нови маратонки. Оглеждате офертите, но имате
+        /*▪  да си купите нови маратонки. Оглеждате офертите, но имате
 няколко изисквания:
 1. Цената им не трябва да е над 150 лв.;
-2. Ȁрябва да са размер 44 или 45;
-3. Ȁрябва да не са черни;
-4. Ȁрябва задължително да можете да ги върнете;
+2.  да са размер 44 или 45;
+3.  да не са черни;
+4.  задължително да можете да ги върнете;
 ▪ Напишете проверка с IF-ELSE която да отразява всички условия.
 
 
@@ -31,7 +36,7 @@ public class CodeAcademyExercise {
 
             if (letter.length() == 1 && vowels) {
                 System.out.println("The letter " + letter + " is a vowel ");
-            } else if (letter.length() == 1 && !vowels) {
+            } else if (letter.length() == 1) {
                 System.out.println("The letter  " + letter + " is not a vowel");
             } else if (letter.length() != 1 && !"stop".equals(letter)) {
                 System.out.println("Invalid Input");
@@ -45,12 +50,12 @@ public class CodeAcademyExercise {
     public static void shoes () {
 
         /*Задача 1
-▪ Ȁрябва да си купите нови маратонки. Оглеждате офертите, но имате
+▪  да си купите нови маратонки. Оглеждате офертите, но имате
 няколко изисквания:
 1. Цената им не трябва да е над 150 лв.;
-2. Ȁрябва да са размер 44 или 45;
-3. Ȁрябва да не са черни;
-4. Ȁрябва задължително да можете да ги върнете;
+2.  да са размер 44 или 45;
+3.  да не са черни;
+4.  задължително да можете да ги върнете;
 ▪ Напишете проверка с IF-ELSE която да отразява всички условия.
 
          */
@@ -461,7 +466,8 @@ public class CodeAcademyExercise {
 
     }//ТРЯБВА ПОДОБРЕНИЕ !!!!
 
-    public static void traditionalSaladVersion2() {
+    public static void traditionalSaladVersion2()
+    {
         /*3. Искате да си направите шопска салата. Трябват ви домати, краставици, лук, чушки, сирене:
 Цената на продуктите
 Домати - 7лв/кг
@@ -572,6 +578,309 @@ public class CodeAcademyExercise {
                     , totalMoney, totalSaladMade);
         }
 
+    public static void addNumbers100 (){
+
+        /*Напишете програма, която събира само положителни числа до 100, ако
+потребителят въведе отрицателно число го пропускате.
+
+         */
+
+
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.println("Add bunch of random numbers and if they are in parameters the program will add them" +
+                    "if u wish to stop the program enter the Devil's number");
+            int number1 = 0;
+
+            while ( number1 !=666){
+                System.out.println("Enter a number");
+                 number1 = scanner.nextInt();
+
+                if(number1 < 0){
+                    System.out.println("You must enter a positive number");
+                    continue;
+                }else if (number1 > 100){
+                    System.out.println("You must enter a number lower then 100");
+                    continue;
+                }else{
+                  int result =  number1 + number1;
+                    System.out.println(number1 + " + " + number1 + " = " + result);
+                }
+
+
+
+
+
+
+            }
+
+
+
+
+
+
+
+
+        }
+
+    public static void factorial(){
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter a positive number to calculate factorial \nif u wish to stop calculation" +
+                "please enter the devils number:");
+        int number = 0;
+        while (number != 666) {
+            number = scanner.nextInt();
+            System.out.println("Factorial of " + number + " is " + factorial(number));
+        }
+
+
+
+
+
+
+
+    }
+
+    public static void printTriangle(){
+
+                int a = 5;
+                for (int i = a; i >= 1; i--) {
+                    for (int j = a; j >= 1; j--) {
+                        System.out.print(j + " ");
+                    }
+                    a--;
+
+                    System.out.println();
+                }
+            }
+
+    public static void isTheWordPalindrome(){
+
+
+        Scanner scanner = new Scanner(System.in);
+
+        boolean isPalindrome = false;
+
+        while (!isPalindrome){
+
+            System.out.println("Enter a word to check if its palindrome");
+            String word = scanner.nextLine();
+
+            String wordInReverse = new StringBuilder(word).reverse().toString();
+
+            if (wordInReverse.equalsIgnoreCase(word)){
+                System.out.println("Your word is palindrome");
+                isPalindrome = true;
+            }else {
+                System.out.println("Your word is not a palindrome");
+            }
+
+        }
+
+
+    }
+
+    public static void drawSquare(){
+
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the size of the square");
+        int size = scanner.nextInt();
+
+
+        if (size >= 1 && size <= 30){
+
+            for (int i = 1; i<= size; i++){
+                for (int j = 1; j <=size;j++){
+                    System.out.print("#" + " ");
+                }
+                System.out.println();
+
+            }
+
+        }else {
+            System.out.println("Wrong Size");
+        }
+
+
+
+
+
+
+    }
+
+    public static void addNumbersTogether(){
+
+        Scanner scanner = new Scanner(System.in);
+
+        String command = "";
+
+        do {
+
+
+            System.out.println("Enter first number");
+            int number1 = scanner.nextInt();
+            System.out.println("Enter Second number");
+            int number2 = scanner.nextInt();
+
+            int result = number1 + number2;
+            System.out.println(number1 + " + " + number2 + " = " + result);
+
+
+            System.out.println("Do you want to add numbers again or exit the program yes or no");
+            command = scanner.next();
+
+
+
+        }while (command.equalsIgnoreCase("yes"));
+
+
+    }
+
+    public static void enterNumbers(){
+
+        Scanner scanner = new Scanner(System.in);
+
+        int positive = 0;
+        int negative = 0;
+        int zero = 0;
+        System.out.println("Enter whatever numbers u like if u ever wish to stop enter the Devil's number");
+       double number = scanner.nextDouble();
+
+
+
+
+       do {
+           System.out.println("Enter a new number");
+            number = scanner.nextDouble();
+
+           if (number > 0){
+               positive++;
+           }else if (number < 0){
+               negative++;
+           }else if (number == 0){
+               zero++;
+           }
+       }while (number !=666);
+
+        System.out.println("You have entered \n" + positive + " Positive numbers\n" + negative + " Negative numbers\n" +
+                ""+ zero + " total times u entered 0 ");
+
+    }
+
+    public static void MinAndMaxNumber(){
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("You are here to enter some numbers if u ever wish to stop enter the devil's number");
+
+        int  number = scanner.nextInt();
+
+        int maxNumber = Integer.MIN_VALUE;
+        int minNumber = Integer.MAX_VALUE;
+
+        while (number != 666){//като може и да го направим с проверка след всеки 2 числа да пита
+            //дали да продължим но сметнах че така ще е по бързо
+
+            System.out.println("Enter a new number");
+            number = scanner.nextInt();
+
+            if (number > maxNumber){
+                maxNumber = number;
+            }else if (number < minNumber){
+                minNumber = number;
+            }
+        }
+
+
+        System.out.println(maxNumber);
+        System.out.println(minNumber);
+
+    }
+
+    public static void reverseNumbers(){
+
+        Scanner scanner = new Scanner(System.in);
+        int numberInReverse = 0;
+        int number = scanner.nextInt();
+        System.out.println("Your number is " + number );
+        while(number != 0) {
+
+
+            int digit = number % 10;
+            numberInReverse = numberInReverse * 10 + digit;
+
+
+            number /= 10;
+        }
+
+        System.out.println("Reversed Number: " + numberInReverse);
+    }
+
+    public static void enterAccount(){
+
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Hello please enter pin to enter ");
+
+        int pin = 0;
+        int numberOfWrongPins = 0;
+
+        while (pin != 7828){
+            pin = scanner.nextInt();
+            numberOfWrongPins ++;
+            if (numberOfWrongPins == 3){
+                System.out.println("Account blocked");
+                break;
+            }else if (pin == 7828){
+                System.out.println("Welcome Mr.Tony Stark");
+                break;
+            }
+            System.out.println("You have entered a wrong pin");
+        }
+
+
+    }
+
+    public static void stringVowels(){
+
+        Scanner scanner = new Scanner(System.in);
+
+        String numberOfVowels = scanner.nextLine().toLowerCase();
+        int vowels = 0;
+
+        for (int i = 0;i<numberOfVowels.length();i++){
+
+         //   if(numberOfVowels.charAt(i) == 'a'){
+         //       vowels++;
+         //   }else if (numberOfVowels.charAt(i) =='e'){
+         //       vowels++;
+         //   }else if (numberOfVowels.charAt(i) == 'i'){
+         //       vowels++;
+         //   }else if (numberOfVowels.charAt(i) =='o'){
+         //       vowels++;
+         //   }else if (numberOfVowels.charAt(i) == 'u'){
+         //       vowels++;
+         //   }
+
+            if(numberOfVowels.charAt(i) == 'a'|| numberOfVowels.charAt(i) == 'e'||
+                    numberOfVowels.charAt(i) == 'i' || numberOfVowels.charAt(i) == 'o' ||
+                    numberOfVowels.charAt(i) == 'u'){
+                vowels++;
+            }
+
+
+        }
+        System.out.println("The string u entered contains " + vowels + " Vowels" );
+
+    }
+
+
+
+
 
 
 
@@ -592,8 +901,18 @@ public class CodeAcademyExercise {
        // discountForCloths();
        // cinemaTickets();
         //traditionalSalad();
-        traditionalSaladVersion2();
-
+       // traditionalSaladVersion2();
+       // addNumbers100();
+       //factorial();
+      //  printTriangle();
+       // isTheWordPalindrome();
+        // drawSquare();
+      //  addNumbersTogether();
+      //  enterNumbers();
+       // MinAndMaxNumber();
+       // reverseNumbers();
+       // enterAccount();
+       // stringVowels();
 
 
     }
