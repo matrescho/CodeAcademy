@@ -817,7 +817,10 @@ public class CodeAcademyExercise {
         }
 
         System.out.println("Reversed Number: " + numberInReverse);
+        System.out.println(Integer.reverse(number));//Най лесният начин
     }
+
+
 
     public static void enterAccount(){
 
