@@ -817,7 +817,7 @@ public class CodeAcademyExercise {
         }
 
         System.out.println("Reversed Number: " + numberInReverse);
-        System.out.println(Integer.reverse(number));//Най лесният начин
+        System.out.println(new StringBuffer(String.valueOf(number)).reverse());//Най лесният начин
     }
 
 
@@ -857,17 +857,7 @@ public class CodeAcademyExercise {
 
         for (int i = 0;i<numberOfVowels.length();i++){
 
-         //   if(numberOfVowels.charAt(i) == 'a'){
-         //       vowels++;
-         //   }else if (numberOfVowels.charAt(i) =='e'){
-         //       vowels++;
-         //   }else if (numberOfVowels.charAt(i) == 'i'){
-         //       vowels++;
-         //   }else if (numberOfVowels.charAt(i) =='o'){
-         //       vowels++;
-         //   }else if (numberOfVowels.charAt(i) == 'u'){
-         //       vowels++;
-         //   }
+
 
             if(numberOfVowels.charAt(i) == 'a'|| numberOfVowels.charAt(i) == 'e'||
                     numberOfVowels.charAt(i) == 'i' || numberOfVowels.charAt(i) == 'o' ||
@@ -880,6 +870,8 @@ public class CodeAcademyExercise {
         System.out.println("The string u entered contains " + vowels + " Vowels" );
 
     }
+
+
 
 
 
@@ -916,6 +908,10 @@ public class CodeAcademyExercise {
        // reverseNumbers();
        // enterAccount();
        // stringVowels();
+
+
+
+
 
 
     }
