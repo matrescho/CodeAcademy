@@ -31,7 +31,6 @@ public class DiceGameVersion2 {
            playersResults.add(diceThrow(6));
            players.add(i);
            if(command.equalsIgnoreCase("n")){
-               System.out.println("The Big Winner is ");
                break;
            }
            if (playersResults.contains(12)){
